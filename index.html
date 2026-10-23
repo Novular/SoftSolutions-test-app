@@ -1,0 +1,399 @@
+{
+  "id": "cedbbf1e-8ae2-41ab-938c-5afb8f1d9697",
+  "version": "3.0",
+  "name": "New Project",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "fc0d28a0-0f11-4ee1-8d48-0a826d88f2e8",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "5265b535-2b67-443b-98a3-c2c4f63973a3"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "5265b535-2b67-443b-98a3-c2c4f63973a3",
+      "name": "CP-01 LOGIN EXITOSO",
+      "commands": [
+        {
+          "id": "148771eb-3c85-4f9b-9d01-9ecfa7962b52",
+          "command": "open",
+          "target": "http://localhost:8000/SoftSolutions.html",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "admin",
+          "id": "c9ef265b-38f1-458f-95f2-caa905b5fcd4"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "admin123",
+          "id": "dd29823a-682a-421a-a8cd-2b5fc2edba96"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-login",
+          "value": "",
+          "id": "a83d1385-4e3e-4e13-bdc8-fa4346515099"
+        },
+        {
+          "command": "pause",
+          "target": "1000",
+          "value": "",
+          "id": "bc5bd0cf-dfc3-41b3-917a-d2c81149853d",
+          "comment": ""
+        },
+        {
+          "command": "click",
+          "target": "css=.nav-links > button:nth-child(1)",
+          "value": "",
+          "id": "433d4d28-73ed-4c5b-87ca-1178355fb6c4"
+        },
+        {
+          "command": "assertText",
+          "target": "id=dashboard-welcome",
+          "value": "Bienvenido al sistema, Administrador",
+          "id": "c7cad8b0-a713-4200-93a9-6acda90e3aa8"
+        }
+      ]
+    },
+    {
+      "id": "5f62744a-7e27-4efe-b087-d6c7e0cb75d4",
+      "name": "",
+      "commands": [
+        {
+          "id": "42d23737-7373-4237-aca8-a2123c892d9c",
+          "command": "open",
+          "target": "/",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "id": "23703063-a191-4d95-a318-c2d71b61e0a0",
+      "name": "CP-02 REGISTRO DEL PRODUCTO",
+      "commands": [
+        {
+          "id": "95f5e3a8-7c3e-4249-9a6e-e7b24fec3329",
+          "command": "open",
+          "target": "http://localhost:8000/SoftSolutions.html",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "admin",
+          "id": "0f0f37cb-59bc-4475-9695-cf2b9862bf36"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "admin123",
+          "id": "5a409b26-18de-48f2-8929-b50c1c498982"
+        },
+        {
+          "command": "click",
+          "target": "css=.nav-links > button:nth-child(1)",
+          "value": "",
+          "id": "82de30a0-9b79-46bb-9517-21a69634a4dc"
+        },
+        {
+          "command": "type",
+          "target": "id=product-name",
+          "value": "Teclado mecanico",
+          "id": "90960404-6868-4232-a2a1-4945ff45f1ba"
+        },
+        {
+          "command": "type",
+          "target": "id=product-price",
+          "value": "150000",
+          "id": "04f50c2e-aeb9-4ef9-91be-de5f2400bf6e"
+        },
+        {
+          "command": "type",
+          "target": "id=product-stock",
+          "value": "10",
+          "id": "297f74bc-41b0-4c69-a58d-9f14538e4055"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-save-product",
+          "value": "",
+          "id": "6038deb9-f3d0-4b9a-816c-7fa35d3a8d45"
+        },
+        {
+          "command": "assertText",
+          "target": "id=product-alert",
+          "value": "Producto creadoexitosamente",
+          "id": "3ed7de5d-84dc-4263-a20b-1440d51702e6"
+        }
+      ]
+    },
+    {
+      "id": "cbdf2b5e-6773-4d53-9069-7e872fea2370",
+      "name": "CP-03 PEDIDO SIN CLIENTES",
+      "commands": [
+        {
+          "id": "04b71cd2-49a4-47d1-b31f-902ae3f49c59",
+          "command": "open",
+          "target": "http://localhost:8000/SoftSolutions.html",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "admin",
+          "id": "0033a64e-8a66-4730-b60b-f55b02259ff5"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "admin123",
+          "id": "ed4c9cab-b6db-4340-9651-8d9f2edeff82"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-login",
+          "value": "",
+          "id": "ed551c99-06d2-490e-8f1d-7b3eef4b96a7"
+        },
+        {
+          "command": "click",
+          "target": "css=.nav-links > button:nth-child(1)",
+          "value": "",
+          "id": "fed66596-b384-43ca-acc7-b27c3f7c1404"
+        },
+        {
+          "command": "type",
+          "target": "id=product-name",
+          "value": "Laptop  HP",
+          "id": "0ff27140-f848-4f6c-aa33-3047f191c95f"
+        },
+        {
+          "command": "type",
+          "target": "id=product-price",
+          "value": "2500000",
+          "id": "44e7186d-1779-4303-a77a-616c3ac907f6"
+        },
+        {
+          "command": "type",
+          "target": "id=product-stock",
+          "value": "3",
+          "id": "e75dd6f8-b4d4-4f3e-ad53-adc22271d006"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-save-product",
+          "value": "",
+          "id": "caa4edf4-3071-4126-8fb6-9d09fc47345c"
+        },
+        {
+          "command": "click",
+          "target": "css=.nav-link > button:nth-child(2)",
+          "value": "",
+          "id": "29625e41-9cca-47ae-9662-8a953fab22a7"
+        },
+        {
+          "command": "pause",
+          "target": "1000",
+          "value": "",
+          "id": "8cbb8d52-351c-4d5c-8db9-805cb1153f5e"
+        },
+        {
+          "command": "click",
+          "target": "id=order-product",
+          "value": "",
+          "id": "8f0a9829-c3fa-4a7f-a171-a3fcc6aa423d"
+        },
+        {
+          "command": "select",
+          "target": "id=order-product",
+          "value": "id=order-qty",
+          "id": "6bf0a965-c2f0-4a08-ad3b-79fc1dda234f",
+          "comment": "",
+          "fallbackValues": [
+            [
+              "id=order-qty",
+              "id"
+            ],
+            [
+              "css=#order-qty",
+              "css:finder"
+            ],
+            [
+              "xpath=(//input[@id='order-qty'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='orders-section']/input[2])[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "select",
+          "target": "id=order-product",
+          "value": "label=Monitor  HP (stock: 5)",
+          "id": "78429558-6efd-4308-801a-c73ea9909997"
+        },
+        {
+          "command": "type",
+          "target": "id=order-qty",
+          "value": "1",
+          "id": "fd2ec67d-9b67-428d-9773-088101b7f47d"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-create-order",
+          "value": "",
+          "id": "8914289c-f7b3-41ed-918d-e545c96b5f53"
+        },
+        {
+          "command": "assertText",
+          "target": "id=order-alert",
+          "value": "Error: debe seleccionar un cliente",
+          "id": "30a7ac96-848d-4c8b-a15b-2fcf8f3853cb"
+        }
+      ]
+    },
+    {
+      "id": "7120b301-2694-4d83-b62c-898750c0e29f",
+      "name": "CP-04 PEDIDO GUARDADO EN STOCK",
+      "commands": [
+        {
+          "id": "21c9e2e7-62f9-42de-9e0d-c29e0b21dda9",
+          "command": "open",
+          "target": "http://localhost:8000/SoftSolutions.html",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "admin",
+          "id": "fbdbb119-8fc0-498c-a08e-74e5ecf502f5"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "admin123",
+          "id": "07a1e751-8974-4733-8942-52bf4eaa9d43"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-login",
+          "value": "",
+          "id": "7e40db3f-4496-46b3-8e8c-2ee0abbf2c3f"
+        },
+        {
+          "command": "pause",
+          "target": "1000",
+          "value": "",
+          "id": "d0163a1d-607f-4a28-8228-9d03bc5fe1b3"
+        },
+        {
+          "command": "click",
+          "target": "css=.nav-links > button:nth-child(1)",
+          "value": "",
+          "id": "306e7a30-4cff-4fc2-9ccf-74ef99433514"
+        },
+        {
+          "command": "type",
+          "target": "id=product-name",
+          "value": "Silla Ergonomica",
+          "id": "5dc79078-9572-43a1-b005-52fe96968b8f"
+        },
+        {
+          "command": "type",
+          "target": "id=product-price",
+          "value": "400000",
+          "id": "5cf9963b-d0c9-4e11-af61-5d6009e97bba"
+        },
+        {
+          "command": "type",
+          "target": "id=product-stock",
+          "value": "10",
+          "id": "917f08d3-1fa8-4bc8-a4e9-78651bf84027"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-save-product",
+          "value": "",
+          "id": "5ac733fe-505b-422b-8aed-fb31f2c8dc14"
+        },
+        {
+          "command": "click",
+          "target": "css=.nav-links > button:nth-child(2)",
+          "value": "",
+          "id": "0101b333-4eea-437f-a15d-11ed6cdf0699"
+        },
+        {
+          "command": "pause",
+          "target": "1000",
+          "value": "",
+          "id": "e3ca0397-320c-44de-ab40-e35a87df3c7d"
+        },
+        {
+          "command": "type",
+          "target": "id=order-client",
+          "value": "Carlos Ruiz",
+          "id": "2affadd2-72fb-4585-9968-93697d34fc38"
+        },
+        {
+          "command": "select",
+          "target": "id=order-product",
+          "value": "label=Silla Erginomica (Stock:10)",
+          "id": "6a1c7fcc-feac-4d3b-b138-7f59e3b88a8d"
+        },
+        {
+          "command": "type",
+          "target": "id=order-qty",
+          "value": "4",
+          "id": "cdbcff96-ea78-4337-8ba4-bd3dce55618c"
+        },
+        {
+          "command": "click",
+          "target": "id=btn-create-order",
+          "value": "",
+          "id": "72f51343-ece1-48a2-ab7d-dacb15d6f027"
+        },
+        {
+          "command": "assertText",
+          "target": "id=order-alert",
+          "value": "Pedido creado exitosamente",
+          "id": "c33841b1-9660-468d-b0f2-4c6191b2aef9"
+        },
+        {
+          "command": "click",
+          "target": "xpath=/7button[text()='Gestion de Productos']",
+          "value": "",
+          "id": "347d2d24-6d0f-4ae0-9e2a-8157bd5b9921"
+        },
+        {
+          "command": "assertText",
+          "target": "",
+          "value": "xpath=//table[@id='table-product']//tr[td[text()='Silla Ergonomica']]/td[4]",
+          "id": "72acd46b-ef74-484e-ac76-eb3399cc280a"
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
